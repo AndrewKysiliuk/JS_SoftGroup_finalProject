@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="newModal">
+    <div class="authorization">
+        <form class="logIn" onsubmit="return false;">
+            <label>Логін:<input name ="login" type="text"></label>
+            <label>Пароль:<input name = "password" type="password"></label>
+            <label hidden>Повторіть пароль:<input name = "repeatPassword" type="password"></label>
+            <div class = "authorization__btn">
+                <button name="logInBtn">Увійти</button>
+                <button name="registerBtn" hidden>Реєстрація</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="newModal" hidden>
+    <div class="merging">
+        <div class="merging__current-info">
+            <h2 class="current-info__title"></h2>
+            <label>Ім'я: <span>Іван</span></label>
+            <label>/Прізвище: <span>Бутько</span></label>
+            <label>/Країна: <span>Україна</span></label>
+            <label>/Місто: <span>Київ</span></label><br>
+            <label>E-mail: <span>qwerty@asd.df</span></label>
+            <label>/Номер телефону: <span>256278365</span></label>
+            <label>/Місце роботи: <span>Комбайнер</span></label>
+            <hr>
+        </div>
+        <div class="merging__new-info">
+            <h2>Новий контакт:</h2>
+            <label>Ім'я: <span></span></label>
+            <label>/Прізвище: <span></span></label>
+            <label>/Країна: <span></span></label>
+            <label>/Місто: <span></span></label><br>
+            <label>E-mail: <span></span></label>
+            <label>/Номер телефону: <span></span></label>
+            <label>/Місце роботи: <span></span></label>
+        </div>
+        <div class="merging__buttons">
+            <button id="changeContact">Замінити старий контакт новим</button>
+            <button id="saveContact">Зберегти новий контакт</button>
+        </div>
+</div>
+</div>
+<div class="container custom_container" hidden>
+    <div class="row">
+        <div class="col-lg-4">
+            <div id="accordion">
+                <div class="accordion__card">
+                    <div class="card__header" id="headingOne">
+                        <h5 class="accordion__title">
+                            <button class="card__btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Створити новий контакт
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="forms">
+                            <form class="forms__contact add" onsubmit="return false;">
+                                <label>Прізвище:*<input type="text" name="name" value="" required></label>
+                                <label>Ім'я:*<input type="text" name="surname" value="" required></label>
+                                <label>Країна:<input type="text" name="country" value="" ></label>
+                                <label>Місто:<input type="text" name="city" value=""></label>
+                                <label>E-mail:*<input type="email" name="mail" value="" required></label>
+                                <label>Номер телефону:*<input type="number" name="phone" value="" required></label>
+                                <label>Місце роботи:<input type="text" name="job" value=""></label>
+                                <button name="Btn">Створити</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__card">
+                    <div class="card__header" id="headingTwo">
+                        <h5 class="accordion__title">
+                            <button class="card__btn collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Видалити контакт
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="forms">
+                            <form class="forms__contact del" onsubmit="return false;">
+                                <label>Прізвище:<input type="text" name="surname" ></label>
+                                <label>Ім'я:<input type="text" name="name" ></label>
+                                <button name="Btn">Видалити</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__card">
+                    <div class="card__header" id="headingThree">
+                        <h5 class="accordion__title">
+                            <button class="card__btn collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Фільтрувати/сортувати контакти
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="forms">
+                            <form class="forms__contact filterSort" onsubmit="return false;">
+                                <div class="sortBy">
+                                    <label>Країнах<input type="radio" name="sortBy" value="country" checked></label>
+                                    <label>Містах<input type="radio" name="sortBy" value="city"></label>
+                                </div>
+                                <button name="sortBtn">Сортувати</button>
+                                <label>Країна:<input type="text" name="country"></label>
+                                <label>Місто:<input type="text" name="city"></label>
+                                <div class="filterSort__btn">
+                                    <button name="filterBtn">Фільтрувати</button>
+                                    <button name="removeFilter">Скинути</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="workspace">
+                <div class="transferAndDelete">
+                    <button class="import">Імпортувати demo записи</button>
+                    <button class="export">Експортувати у csv</button>
+                    <button class="delChecked">Видалити позначені</button>
+                    <button class="logOut">Вийти</button>
+                </div>
+                <div class="addressList">
+                    <table class="table-list" border="1">
+                        <thead>
+                        <tr class="table-list__title">
+                            <th><input type="checkbox" class="selectAll"></th>
+                            <th>Прізвище</th>
+                            <th>Ім'я</th>
+                            <th>E-mail</th>
+                            <th>Номер телефону</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="editData">
+                    <form class="editForm" onsubmit="return false;">
+                        <div class="block">
+                            <label>Ім'я:<input type="text" name="surname" value=""  readonly></label>
+                            <label>Прізвище:<input type="text" name="name" value="" readonly></label>
+                            <label>E-mail:<input type="email" name="mail" value="" readonly></label>
+                        </div>
+                        <div class="block">
+                            <label>Країна:<input type="text" name="country" value="" readonly></label>
+                            <label>Місто:<input type="text" name="city" value="" readonly></label>
+                            <label>Номер телефону:<input type="number" name="phone" value="" readonly></label>
+                        </div>
+                        <div class="block">
+                            <label>Місце роботи:<input type="text" name="job" value="" readonly></label>
+                            <button name="Btn">Редагувати</button>
+                            <div class="block__buttons" hidden>
+                                <button id="saveEditChange">Зберегти зміни</button>
+                                <button id="cancelEdit">Скасувати</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function placesSearch() {
+        new google.maps.places.Autocomplete(document.getElementsByClassName("add")[0].country);
+        new google.maps.places.Autocomplete(document.getElementsByClassName("add")[0].city);
+        new google.maps.places.Autocomplete(document.getElementsByClassName("filterSort")[0].country);
+        new google.maps.places.Autocomplete(document.getElementsByClassName("filterSort")[0].city);
+    }
+</script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkyUaP33hC4VsxUKRUUq42l-zinFuSgAc&libraries=places&callback=placesSearch"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bundle.js"></script>
+</body>
+</html>

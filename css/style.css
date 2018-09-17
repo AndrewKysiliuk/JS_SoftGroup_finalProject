@@ -1,0 +1,227 @@
+body{
+    background-color: #2a484e;
+    height: 100vh;
+    overflow: hidden;
+}
+.custom_container{
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #fff;
+    height: 620px;
+}
+button:focus{
+    outline: 0;
+}
+button:hover{
+    cursor: pointer;
+}
+/*ACCORDION*/
+.accordion__title{
+    text-align: center;
+    margin: 0;
+}
+.accordion__card:first-child .card__header{
+    background-color: cornflowerblue;
+}
+.accordion__card:nth-child(2) .card__header{
+    background-color: #ed4d4a;
+}
+.accordion__card:last-child .card__header{
+    background-color: darkmagenta;
+}
+.card__btn{
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding: 20px 0;
+}
+.card__btn:focus {
+    outline: 0px auto -webkit-focus-ring-color;
+}
+
+.forms-title{
+    margin: 5px auto 5px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.forms__contact{
+    padding: 5px 15px;
+}
+.forms__contact label{
+    display: block;
+    margin: 0;
+    font-size: 14px;
+}
+.forms__contact input{
+    margin: 0 auto;
+    display: block;
+    font-size: 12px;
+    width: 95%;
+    border: 1px solid black;
+}
+.forms__contact button{
+    width: 90%;
+    font-size: 18px;
+    line-height: 32px;
+    margin: 10px auto;
+    display: block;
+}
+.add{
+    border: 2px solid cornflowerblue;
+}
+.add input{
+    border: 2px solid darkgreen;
+}
+.del{
+    border: 2px solid #ed4d4a;
+}
+.del input{
+    border: 2px solid #bb5658;
+}
+.filterSort{
+    border: 2px solid #8b008b;
+}
+.filterSort input{
+    border: 2px solid #611e61;
+}
+.filterSort__btn{
+    display: flex;
+    justify-content: space-between;
+}
+.filterSort__btn button{
+    font-size: 12px;
+    line-height: 24px;
+    margin: 10px;
+    width: 45%;
+}
+.sortBy{
+    display: flex;
+    justify-content: space-around
+}
+.sortBy label{
+    width: 40%;
+    text-align: center;
+    font-size: 18px;
+}
+
+/*Workspace*/
+.workspace{
+    height: 620px;
+}
+/*Buttons export,import,delete*/
+.transferAndDelete{
+    display: flex;
+    justify-content: space-between;
+    height: 5%;
+}
+/*Adress list*/
+.addressList{
+    margin: 10px 0;
+    height: 63%;
+overflow-y: scroll;
+}
+.table-list{
+    width: 100%;
+}
+.table-list__title th{
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0 5px;
+    width: 24%;
+}
+.table-list__title th:first-child {
+    width: 3%;
+}
+
+.defaultTd{
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+}
+.customTd{
+    text-align: center;
+    background-color: #24264e;
+    color: #fff;
+    font-size: 16px;
+}
+/*Edit data*/
+.editData{
+    height: 27%;
+    padding: 5px;
+    border: 2px solid #2a4059;
+}
+.editForm{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.block{
+    width: 30%;
+}
+.editForm label{
+    display: block;
+    margin: 0;
+    font-size: 14px;
+}
+.editForm input{
+    display: flex;
+    width: 100%;
+    border: 1px solid #000;
+}
+.editForm button{
+    width: 100%;
+    margin-top: 5px;
+}
+/*modal-merging*/
+.newModal{
+    background-color: rgb(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    padding: 175px 255px;
+}
+.merging{
+    background-color: #fff;
+    width: 800px;
+    height: auto;
+}
+.merging span{
+    font-weight: bold;
+}
+.merging h2{
+    font-size: 20px;
+    text-align: center;
+}
+.merging__buttons{
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+/*modal-authorization*/
+.authorization{
+    border-radius: 5px;
+    background-color: #fff;
+    width: 300px;
+    height: auto;
+    padding: 15px;
+    margin: 0 auto;
+}
+.authorization__btn{
+    display: flex;
+    justify-content: space-around;
+}
+.authorization__btn button{
+    width: 100%;
+}
+.logIn label{
+    display: block;
+    text-align: center;
+}
+.logIn input{
+    display: block;
+    width: 100%;
+}
